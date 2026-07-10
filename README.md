@@ -1,6 +1,6 @@
 # Nautilus AquaVision v0
 
-[![Release](https://img.shields.io/badge/release-v0.1.0-alpha-blue)](RELEASE_NOTES.md)
+[![Release](https://img.shields.io/badge/release-v0.1.0--alpha-blue.svg)](RELEASE_NOTES.md)
 [![Model](https://img.shields.io/badge/model-YOLO26n-informational)](MODEL_CARD.md)
 [![License](https://img.shields.io/badge/code%20%26%20weights-AGPL--3.0-green)](LICENSE)
 
