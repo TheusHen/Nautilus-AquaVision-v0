@@ -2,7 +2,13 @@ name: release-check
 
 on:
   push:
+    branches:
+      - main
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   verify:
@@ -16,3 +22,25 @@ jobs:
           python-version: "3.11"
       - run: pip install onnx==1.19.1
       - run: python scripts/check_release.py
+
+  publish:
+    name: Publish GitHub Release
+    needs: verify
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Create release and upload weights
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v0.1.0-alpha
+          name: Nautilus AquaVision v0.1.0-alpha
+          prerelease: true
+          generate_release_notes: true
+          fail_on_unmatched_files: true
+          files: |
+            weights/nautilus-aquavision-v0.1.0-alpha.pt
+            weights/nautilus-aquavision-v0.1.0-alpha.onnx
