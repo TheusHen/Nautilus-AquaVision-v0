@@ -1,0 +1,5 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+Official legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+Official deed: https://creativecommons.org/licenses/by/4.0/
+
+This notice identifies the upstream license for the floating marine litter dataset. The original dataset is not redistributed in this repository.

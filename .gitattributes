@@ -1,0 +1,7 @@
+*.pt binary
+*.onnx binary
+*.png binary
+*.jpg binary
+*.ipynb text eol=lf
+*.py text eol=lf
+*.md text eol=lf

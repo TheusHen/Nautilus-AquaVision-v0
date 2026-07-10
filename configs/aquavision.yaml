@@ -1,0 +1,9 @@
+# Point `path` to the merged AquaVision dataset directory.
+# The original dataset images are intentionally not redistributed here.
+path: ../dataset
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: floating_object

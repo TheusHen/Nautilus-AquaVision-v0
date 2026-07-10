@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use Nautilus AquaVision, please cite this software and the upstream datasets."
+title: "Nautilus AquaVision v0"
+type: software
+version: "0.1.0-alpha"
+date-released: "2026-07-10"
+authors:
+  - given-names: "Matheus"
+    family-names: "Henrique"
+    alias: "TheusHen"
+repository-code: "https://github.com/TheusHen/Nautilus-AquaVision"
+license: AGPL-3.0-or-later
+keywords:
+  - computer vision
+  - object detection
+  - marine litter
+  - floating debris
+  - YOLO26
+references:
+  - type: dataset
+    title: "Nautilus 'AquaVision v0' Floating Object Detection"
+    authors:
+      - given-names: "Matheus"
+        family-names: "Henrique"
+    year: 2026
+    doi: "10.34740/KAGGLE/DSV/17844306"
+    url: "https://www.kaggle.com/dsv/17844306"

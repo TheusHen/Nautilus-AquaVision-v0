@@ -1,0 +1,65 @@
+{
+  "release": "0.1.0-alpha",
+  "architecture": "Ultralytics YOLO26n",
+  "task": "object detection",
+  "class_names": [
+    "floating_object"
+  ],
+  "input_size": [
+    960,
+    960
+  ],
+  "parameters_training_graph": 2504190,
+  "parameters_fused": 2375031,
+  "gflops_fused": 5.2,
+  "dataset": {
+    "train_images": 5282,
+    "validation_images": 667,
+    "test_images": 654,
+    "total_images": 6603,
+    "train_instances_reported_by_ultralytics_labels_plot": 32085,
+    "validation_instances": 4210
+  },
+  "training": {
+    "epochs": 100,
+    "best_epoch": 88,
+    "image_size": 960,
+    "batch_size": 8,
+    "device": "NVIDIA Tesla T4 (14.56 GB)",
+    "duration_hours": 4.733,
+    "ultralytics_version": "8.4.91",
+    "torch_version": "2.10.0+cu128",
+    "seed": 0
+  },
+  "validation_best_checkpoint": {
+    "precision": 0.89711,
+    "recall": 0.85012,
+    "mAP50": 0.92902,
+    "mAP50_95": 0.65381,
+    "recommended_balanced_confidence_from_f1_curve": 0.395
+  },
+  "onnx": {
+    "opset": 20,
+    "input": {
+      "name": "images",
+      "shape": [
+        1,
+        3,
+        960,
+        960
+      ],
+      "dtype": "float32"
+    },
+    "output": {
+      "name": "output0",
+      "shape": [
+        1,
+        300,
+        6
+      ],
+      "dtype": "float32"
+    },
+    "end_to_end": true,
+    "nms": false
+  }
+}

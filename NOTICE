@@ -1,0 +1,10 @@
+Nautilus AquaVision v0
+Copyright (C) 2026 Matheus Henrique
+
+This project uses and fine-tunes Ultralytics YOLO26, distributed under AGPL-3.0 and/or the Ultralytics Enterprise license.
+
+Training-data attribution:
+- Lazzerini, Guido; Ferreira, Fausto; Ridolfi, Alessandro. "floating marine litter dataset" (2025), SEANOE, DOI 10.17882/106148, CC BY 4.0. Modified.
+- Qiao, Guangchao; Yang, Mingxiang; Wang, Hao. "IWHR_AI_Lable_Floater_V1" (2024), Figshare, DOI 10.6084/m9.figshare.27376851, Apache-2.0. Modified.
+
+Original training images and annotations are not included.

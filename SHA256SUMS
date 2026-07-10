@@ -1,0 +1,4 @@
+d6565a3eca3961549664876bb0316e9d38c691279bb1ab4df67a3213c4b25ebc  weights/nautilus-aquavision-v0.1.0-alpha.pt
+ae7ed8172bf6ea0a813cb5d405522d2cacd46b976ef414ca6f28f7f01618a243  weights/nautilus-aquavision-v0.1.0-alpha.onnx
+8dfbf6ad0ef2c17783e07dd548168ae8cca7f0530238b8e3b6f7057e920a93a4  metrics/summary.json
+13f2a009325d8d05f3353644a39a06310923425a494752940de2992f59f70ce9  metrics/training_history.csv
