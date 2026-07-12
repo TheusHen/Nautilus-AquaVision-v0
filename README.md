@@ -24,6 +24,30 @@
 
 The best checkpoint was selected at epoch **88** from a 100-epoch run. Metrics were recovered directly from the published `best.pt` checkpoint and the original Kaggle notebook.
 
+## ONNX runtime requirements
+
+The ONNX export was benchmarked locally with ONNX Runtime using the generated requirements report.
+
+- Model file: `weights/nautilus-aquavision-v0.1.0-alpha.onnx`
+- ONNX size on disk: **9.55 MiB**
+- Estimated weights: **9.42 MiB**
+- Parameters: **2,469,576**
+- Input shape: **[1, 3, 960, 960]**
+- Output shape: **[1, 300, 6]**
+
+Performance benchmarks (CPUExecutionProvider):
+- 1 thread: **210.30 ms median**, **220.57 ms P95**, **4.76 inf/s**
+- 2 threads: **113.01 ms median**, **228.02 ms P95**, **8.85 inf/s**
+- 4 threads: **105.59 ms median**, **169.17 ms P95**, **9.47 inf/s**
+
+Estimated system requirements:
+- Minimum system RAM: **4 GiB**
+- Recommended system RAM: **8 GiB**
+- Minimum process budget: **256.37 MiB**
+- Recommended process budget: **320.46 MiB**
+- Minimum free storage: **11.46 MiB**
+- Recommended free storage: **23.88 MiB**
+
 ## Resources
 
 - Kaggle notebook: https://www.kaggle.com/code/theushen/aquavision-v0-1-0-alpha

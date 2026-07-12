@@ -1,0 +1,208 @@
+{
+  "generated_at": "2026-07-12T18:09:13+0000",
+  "host": {
+    "os": "Linux-6.8.0-1052-azure-x86_64-with-glibc2.39",
+    "python": "3.12.1",
+    "cpu": "x86_64",
+    "physical_cores": 2,
+    "logical_cores": 4,
+    "system_ram_bytes": 16772866048,
+    "onnx_version": "1.19.1",
+    "onnxruntime_version": "1.23.2",
+    "available_providers": [
+      "AzureExecutionProvider",
+      "CPUExecutionProvider"
+    ]
+  },
+  "static": {
+    "model_path": "/workspaces/Nautilus-AquaVision-v0/weights/nautilus-aquavision-v0.1.0-alpha.onnx",
+    "onnx_ir_version": 9,
+    "producer_name": "pytorch",
+    "producer_version": "2.10.0",
+    "opsets": {
+      "ai.onnx": 20
+    },
+    "graph_name": "main_graph",
+    "nodes": 383,
+    "operator_histogram": {
+      "Conv": 102,
+      "Mul": 90,
+      "Sigmoid": 88,
+      "Concat": 24,
+      "Add": 21,
+      "Split": 12,
+      "Reshape": 12,
+      "Transpose": 5,
+      "MatMul": 4,
+      "MaxPool": 3,
+      "Unsqueeze": 3,
+      "Softmax": 2,
+      "Resize": 2,
+      "Slice": 2,
+      "TopK": 2,
+      "Flatten": 2,
+      "Tile": 2,
+      "GatherElements": 2,
+      "Sub": 1,
+      "ReduceMax": 1,
+      "Mod": 1,
+      "Gather": 1,
+      "Cast": 1
+    },
+    "parameters": 2469576,
+    "weight_bytes_estimate": 9878464,
+    "disk_bytes": 10015041,
+    "weight_dtype_histogram": {
+      "FLOAT": 2469536,
+      "INT64": 40
+    },
+    "inputs": [
+      {
+        "name": "images",
+        "shape": [
+          1,
+          3,
+          960,
+          960
+        ],
+        "dtype": "FLOAT"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "output0",
+        "shape": [
+          1,
+          300,
+          6
+        ],
+        "dtype": "FLOAT"
+      }
+    ],
+    "dynamic_inputs": [],
+    "shape_inference_warning": null
+  },
+  "resolved_shapes": {
+    "images": [
+      1,
+      3,
+      960,
+      960
+    ]
+  },
+  "benchmarks": [
+    {
+      "provider": "CPUExecutionProvider",
+      "threads": 1,
+      "session_load_ms": 43.68610900019121,
+      "median_ms": 198.14651799993044,
+      "p95_ms": 210.88048235008046,
+      "mean_ms": 200.11267056664414,
+      "throughput_per_s": 5.046770491320726,
+      "baseline_rss_bytes": 92422144,
+      "loaded_rss_bytes": 118665216,
+      "peak_rss_bytes": 317501440,
+      "model_rss_delta_bytes": 225079296,
+      "peak_gpu_delta_bytes": null,
+      "profile_file": null,
+      "error": null
+    },
+    {
+      "provider": "CPUExecutionProvider",
+      "threads": 2,
+      "session_load_ms": 39.83973699996568,
+      "median_ms": 105.19010849998267,
+      "p95_ms": 115.15735019997918,
+      "mean_ms": 107.36869609995665,
+      "throughput_per_s": 9.506597286190315,
+      "baseline_rss_bytes": 114126848,
+      "loaded_rss_bytes": 126164992,
+      "peak_rss_bytes": 324321280,
+      "model_rss_delta_bytes": 210194432,
+      "peak_gpu_delta_bytes": null,
+      "profile_file": null,
+      "error": null
+    },
+    {
+      "provider": "CPUExecutionProvider",
+      "threads": 4,
+      "session_load_ms": 52.46574900002088,
+      "median_ms": 101.78512299989961,
+      "p95_ms": 145.1252830001749,
+      "mean_ms": 109.22114700000141,
+      "throughput_per_s": 9.82461847593372,
+      "baseline_rss_bytes": 115249152,
+      "loaded_rss_bytes": 128024576,
+      "peak_rss_bytes": 326737920,
+      "model_rss_delta_bytes": 211488768,
+      "peak_gpu_delta_bytes": null,
+      "profile_file": null,
+      "error": null
+    }
+  ],
+  "performance_tiers": [
+    {
+      "provider": "CPUExecutionProvider",
+      "threads": 1,
+      "classification": "usable",
+      "median_ms": 198.14651799993044,
+      "p95_ms": 210.88048235008046,
+      "throughput_per_s": 5.046770491320726
+    },
+    {
+      "provider": "CPUExecutionProvider",
+      "threads": 2,
+      "classification": "best measured",
+      "median_ms": 105.19010849998267,
+      "p95_ms": 115.15735019997918,
+      "throughput_per_s": 9.506597286190315
+    },
+    {
+      "provider": "CPUExecutionProvider",
+      "threads": 4,
+      "classification": "best measured",
+      "median_ms": 101.78512299989961,
+      "p95_ms": 145.1252830001749,
+      "throughput_per_s": 9.82461847593372
+    }
+  ],
+  "requirements": {
+    "measured_best": {
+      "provider": "CPUExecutionProvider",
+      "threads": 4,
+      "median_ms": 101.78512299989961,
+      "p95_ms": 145.1252830001749,
+      "throughput_per_s": 9.82461847593372
+    },
+    "ram": {
+      "measured_model_process_peak_bytes": 225079296,
+      "minimum_app_budget_bytes": 270095155,
+      "recommended_app_budget_bytes": 337618944,
+      "minimum_system_ram_gib": 4,
+      "recommended_system_ram_gib": 8,
+      "note": "Estimate includes a heuristic reserve for the operating system. Other programs, multiple sessions, and concurrency require more RAM."
+    },
+    "vram": {
+      "measured_peak_delta_bytes": null,
+      "minimum_vram_gib": null,
+      "recommended_vram_gib": null,
+      "note": "The NVIDIA measurement is the increase in total GPU memory and may include other processes; on WDDM it may not be available."
+    },
+    "storage": {
+      "model_and_external_data_bytes": 10015041,
+      "minimum_free_bytes": 12018049,
+      "recommended_free_bytes": 25037602,
+      "note": "The recommended headroom allows optimized models, caches, and temporary files; TensorRT may create additional engine cache."
+    }
+  },
+  "notes": [
+    "The model contains FP32 weights. FP16 can roughly halve the weight footprint; INT8 may approach 1/4, but accuracy, operator support, and real gains must be validated.",
+    "For GPU, compare CUDA/TensorRT with CPU: unsupported operators may fall back to CPU, causing transfers and performance loss."
+  ],
+  "methodology": {
+    "minimum_memory_multiplier": 1.2,
+    "recommended_memory_multiplier": 1.5,
+    "benchmark_inputs": "synthetic",
+    "warning": "Synthetic measurements do not replace benchmarks with real inputs and a full pipeline."
+  }
+}
